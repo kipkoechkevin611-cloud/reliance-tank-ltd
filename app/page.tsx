@@ -11,42 +11,41 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center px-4 py-16 md:py-24">
+      <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center px-4 py-20 md:py-24 lg:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/products/vertical-cylindrical/vertical.jpeg"
+            src="/heroes photo.jpg"
             alt="Reliance Tanks Ltd - Water Storage Solutions"
             fill
-            className="object-cover"
+            className="object-cover scale-105 blur-[4px]"
             priority
           />
-          <div className="absolute inset-0 bg-blue-900/70"></div>
+          <div className="absolute inset-0 bg-[#063B78]/75"></div>
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Reliable Water Storage Solutions for Every Need
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Explore our range of water storage tanks and specialized tank solutions in different capacities to suit your needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/shop"
-              className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto"
-            >
-              Shop All Tanks
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
-            <Link
-              href="#vertical-tanks"
-              className="inline-flex items-center justify-center bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors w-full sm:w-auto"
-            >
-              Explore Vertical Tanks
-            </Link>
+        <div className="relative z-10 max-w-6xl mx-auto w-full">
+          <div className="max-w-2xl text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Reliable Water Storage Solutions for Every Need
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              Find the right water tank for your home, farm or business. Durable, affordable, and built to last.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <Link
+                href="/shop"
+                className="inline-flex items-center justify-center bg-[#FFD21F] text-[#063B78] px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD21F]/90 transition-colors w-full sm:w-auto"
+              >
+                Shop Water Tanks
+                <ArrowRight className="ml-2" size={20} />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#063B78] transition-colors w-full sm:w-auto"
+              >
+                Get a Quote
+              </Link>
+            </div>
           </div>
-          <p className="text-lg text-blue-100 mt-6">
-            Call us: <a href="tel:0751519295" className="font-semibold hover:text-white transition-colors">0751519295</a>
-          </p>
         </div>
       </section>
 
@@ -65,14 +64,14 @@ export default function Home() {
       </section>
 
       <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-blue-900">
             Our Product Categories
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Choose from our range of specialized water storage tanks
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {categories.map((category) => {
               const categoryProducts = products.filter((p) => p.category === category);
               const categoryImage = categoryProducts[0]?.mainImage || "";
