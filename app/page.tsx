@@ -17,10 +17,10 @@ export default function Home() {
             src="/heroes photo.jpg"
             alt="Reliance Tanks Ltd - Water Storage Solutions"
             fill
-            className="object-cover scale-105 blur-[4px]"
+            className="object-cover scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-[#063B78]/75"></div>
+          <div className="absolute inset-0 bg-[#063B78]/50"></div>
         </div>
         <div className="relative z-10 max-w-6xl mx-auto w-full">
           <div className="max-w-2xl text-white">
